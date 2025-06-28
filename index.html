@@ -7,87 +7,110 @@
     <title>Wave_Africa</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- coming soon -->
+    <div class="bg-teal-700 text-black text-center py-2 z-50">
+        <p class="text-white font-bold text-[20px]">COMING SOON!!!</p>
+    </div>
+
     <!-- navbar -->
-    <div class="flex items-center justify-between bg-white shadow-lg sticky-top  px-10 py-4 ">
-        <div class="flex-shrink-0 text-lg font-bold ">
-            <img src="assets/img/logo-light-rounded-full-teal.png" class="w-30" alt="">
+    <div class="flex flex-col bg-white shadow-lg sticky top-0 z-50 px-4 py-4 md:px-10">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <img src="assets/img/logo-light-rounded-full-teal.png" class="w-30" alt="Logo">
+            </div>
+
+            <!-- Desktop Navigation (hidden on mobile) -->
+            <div class="items-center hidden lg:flex">
+                <ul class="flex gap-10">
+                    <li><a href="#home" class="font-medium hover:text-teal-500"> Home</a></li>
+                    <li><a href="#features" class="font-medium hover:text-teal-500">Features</a>
+                    </li>
+                    <li><a href="#how_it_works" class="font-medium hover:text-teal-500">How it works</a></li>
+                    <li><a href="#about" class="font-medium hover:text-teal-500">About</a>
+                    </li>
+                    <li><a href="#contact" class="font-medium hover:text-teal-500">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Desktop Buttons (hidden on mobile) -->
+            <div class="hidden lg:flex gap-2">
+                <button>
+                    <a href=""> <img src="https://www.favexapp.com/appbtn.svg" alt=""></a>
+                </button>
+                <button>
+                    <a href=""> <img src="https://www.favexapp.com/appsbtn.svg" alt=""></a>
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden" id="mobile-menu-button">
+                <i class="fa fa-bars text-teal-700 text-[24px] cursor-pointer"></i>
+            </div>
         </div>
-        <div class=" items-center hidden lg:flex">
-            <ul class="flex gap-10">
-                <li><a href="" class="font-medium hover:text-teal-500">Individual</a></li>
-                <li><a href="" class="font-medium hover:text-teal-500">Business</a></li>
-                <li><a href="" class="font-medium hover:text-teal-500">Buy</a></li>
-                <li><a href="" class="font-medium hover:text-teal-500">Sell</a></li>
-                <li><a href="" class="font-medium hover:text-teal-500">Swap</a></li>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="hidden lg:hidden mt-4 pb-4" id="mobile-menu">
+            <ul class="flex flex-col gap-4">
+                <li><a href="#home" class="font-medium hover:text-teal-500"> Home</a></li>
+                <li><a href="#features" class="font-medium hover:text-teal-500">Features</a>
+                </li>
+                <li><a href="#how_it_works" class="font-medium hover:text-teal-500">How it works</a></li>
+                <li><a href="#about" class="font-medium hover:text-teal-500">About</a>
+                </li>
+                <li><a href="#contact" class="font-medium hover:text-teal-500">Contact</a>
+                </li>
             </ul>
-        </div>
-        <div class="flex flex-shrink-0 gap-2 hidden lg:flex">
-            <button
-                class="border border-teal-700 text-teal-700 rounded-[10px] px-8 py-1 hover:bg-teal-700 hover:border-0 hover:text-white ">Sign
-                in</button>
-            <button
-                class="bg-teal-700 text-white rounded-[10px] px-8 py-1 hover:border border-teal-700 hover:bg-white hover:text-teal-700">Register</button>
-        </div>
-        <div class="flex-shrink-0 lg:hidden justify-center">
-            <a href=""><i class="fa fa-bars text-teal-700 text-[24px]"></i></a>
+
+            <div class="flex flex-col gap-2 mt-4">
+                <button>
+                    <img src="https://www.favexapp.com/appbtn.svg" alt="">
+                </button>
+                <button>
+                    <a href=""> <img src="https://www.favexapp.com/appsbtn.svg" alt=""></a>
+                </button>
+            </div>
         </div>
     </div>
 
 
     <!-- trade crypto hero -->
-    <div class="grid md:grid-cols-2 md:px-10 bg-teal-50 overflow-hidden">
-        <div class="p-5 md:mt-10 mx-5">
-            <h1 class="lg:text-[60px]/17 text-[40px]/12 font-bold ">
-                Trade Crypto Smarter And Faster with <span class="text-teal-700"><i>Wave-Africa</i></span>
+    <div class="grid md:grid-cols-3 bg-teal-50 p-10" id="home">
+        <div class="col-span-2 flex flex-col md:mt-8 md:p-10">
+            <h1 class="md:text-[50px]/15 text-[30px]/10 font-bold">
+                Trade and convert Crypto Smarter And Faster with <span class="text-teal-700"><i>Wave-Africa</i></span>
             </h1>
             <p class="md:text-[20px] text-gray-400 mt-2">Smart, Secure and Low Fees</p>
-            <button
-                class="bg-teal-500 px-8 py-2 rounded-md text-white md:mb-10 font-medium text-[18px] hover:bg-teal-700 mt-5">Get
-                Started</button>
+            <div class="md:flex mt-4 gap-4">
+                <button
+                    class="bg-teal-700 rounded-lg text-white mb-2 md:mb-0 font-bold hover:bg-teal-50 hover:border border-teal-700 hover:text-teal-700 hover:px-4 p-3">
+                    <a href=""><i class="fab fa-google-play"></i> Get it on playstore</a>
+                </button>
+                <button
+                    class="border border-teal-700 rounded-lg text-teal-700 font-bold hover:bg-teal-700 hover:border-0 hover:text-white hover:px-4 p-3">
+                    <a href=""><i class="fab fa-apple"></i> Get it on playstore</a>
+                </button>
+            </div>
         </div>
-        <div class="position-relative overflow-hidden w-80 md:w-100 p-3 md:p-0">
-            <div class="position-absolute top-0 start-0 z-10">
-                <img src="assets/img/mrxbox2-left.png" class="w-100 p-5" alt="">
-            </div>
-            <div class="position-absolute z-0">
-                <img src="https://cex.io/_next/image?url=https%3A%2F%2Fcex.io%2F_next%2Fstatic%2Fmedia%2Fbitcoin.dbc2602e.png&w=576&q=75"
-                    class="w-30 -mt-120 md:-mt-150 md:ml-70 ml-50" alt="">
-            </div>
-            <div>
-                <div class="position-absolute z-0">
-                    <img src="https://cex.io/_next/image?url=https%3A%2F%2Fcex.io%2F_next%2Fstatic%2Fmedia%2Fusdt.5ff6df86.png&w=375&q=75"
-                        class="w-30 mt-20 " alt="">
-                </div>
-            </div>
-
-
+        <div class="lg:px-10  ">
+            <img src="assets/img/mrxbox2-left.png" class="" alt="">
         </div>
     </div>
 
-    <div class="mt-10">
-        <h1 class="text-[40px] font-medium text-center">Trade with <span class="text-teal-700"><i>ease</i></span></h1>
-        <div class="flex justify-center lg:gap-15  gap-2 mt-4">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/paypal-small.svg" class="w-15" alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/mastercard-1.png" class="w-15" alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/googlepay-1.png" class="w-15" alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/Sepa-Logo.svg" class="w-15 hidden md:block"
-                alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/Visa.svg" class="w-15 hidden md:block"
-                alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/applepay-1.png" class="w-15" alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/fasterpayment-1.png"
-                class="w-15 hidden md:block" alt="">
-            <img src="https://payload-marketing.moonpay.com/api/media/file/Paysafe-small.svg"
-                class="w-15 hidden md:block" alt="">
-        </div>
+    <!-- features -->
+    <div class="" id="features">
+        <h1 class="font-bold text-4xl text-center mt-12 text-teal-700">Powerful Features</h1>
+        <p class="text-center text-gray-500 mt-4">Everything you need to manage your crypto investments and daily
+            expenses in one secure platform</p>
     </div>
-
-    <!-- Trade with ease -->
-    <div class="grid md:grid-cols-3 lg:p-15 mt-8 md:p-4 gap-4">
+    <div class="grid md:grid-cols-3 lg:p-15 p-4 gap-4">
         <div class="bg-gray-50 p-10 rounded-lg">
             <i class="fa fa-arrow-up bg-gradient-to-l from-cyan-500 to-sky-700 text-white rounded-lg px-4 py-3"></i>
             <h1 class="text-[20px] font-bold mt-4 mb-2">SELL</h1>
@@ -118,9 +141,11 @@
     </div>
 
 
-    <!-- how to get started -->
-    <div class="bg-teal-50 lg:p-10 p-4">
-        <h1 class="text-center font-medium lg:text-[40px] text-[30px] mt-8">How to get started</h1>
+
+    <!-- how it works -->
+    <div class="bg-teal-50 lg:p-10 p-4" id="how_it_works">
+        <h1 class="text-center font-medium lg:text-[40px] text-[30px] mt-8">How it works</h1>
+        <p class="text-center text-gray-500">Get started in just 4 easy steps</p>
         <div class="lg:flex mt-4 md:mt-0 md:p-10">
             <div class="bg-teal-900 rounded-lg text-center p-8 ">
                 <i class="fa fa-user bg-teal-950 p-3 rounded-full text-white mt-5">
@@ -133,7 +158,7 @@
                         now</a>
                 </button>
             </div>
-            <div class="grid md:grid-cols-3 bg-white my-8 md:my-0 lg:my-8 p-10 text-center">
+            <div class="grid md:grid-cols-3 bg-white my-8 md:my-0 lg:my-8 p-10 text-center gap-8">
                 <div class="mb-8 md:mb-0">
                     <i class="fas fa-2 bg-gray-200 text-gray-500 p-4 rounded-full"></i>
                     <h1 class="text-[20px] font-medium mt-3 text-gray-700">Verify Identity</h1>
@@ -144,15 +169,15 @@
                 <div class="mb-8 md:mb-0">
                     <i class="fas fa-3 bg-gray-200 text-gray-500 p-4 rounded-full"></i>
                     <h1 class="text-[20px] font-medium mt-3 text-gray-700">Buy or Sell Crypto</h1>
-                    <p class="text-gray-700 mt-5 text-lg">Add funds to your Wave <br>account to access crypto
-                        <br>services.
+                    <p class="text-gray-700 mt-5 text-lg">Add funds to your Wave account to access crypto
+                        services.
                     </p>
                     <p class="mt-4 text-gray-300">Verify Identity first</p>
                 </div>
                 <div class="mb-8 md:mb-0">
                     <i class="fas fa-4 bg-gray-200 text-gray-500 p-4 rounded-full"></i>
                     <h1 class="text-[20px] font-medium mt-3 text-gray-700">Start your Journey</h1>
-                    <p class="text-gray-700 mt-5 text-lg">Explore crypto <br>opportunities within <br>the Wave
+                    <p class="text-gray-700 mt-5 text-lg">Explore crypto opportunities within the Wave
                         ecosystem.</p>
                     <p class="mt-4 text-gray-300">Buy or sell Crpto first</p>
                 </div>
@@ -161,248 +186,178 @@
     </div>
 
 
-    <!-- wave_ecosystem -->
-    <div>
-        <h1 class="text-center md:text-[50px] text-[30px] mt-10"><span class="text-teal-500"><i>Wave</i></span>
-            Ecosystem</h1>
-        <p class="text-center text-gray-500 text-[20px]">For everyday use</p>
+    <!-- about -->
+    <div class="" id="about">
+        <h1 class="text-center md:text-[40px] text-[30px] mt-10 font-bold">
+            About US</h1>
+        <!-- <p class="text-center text-gray-500 text-[20px]">For everyday use</p> -->
     </div>
-    <div class="grid md:grid-cols-2 bg-gray-100 lg:rounded-[20px] lg:mx-20 mt-8">
-        <div class="lg:p-20 px-8">
-            <p class="text-gray-700 mt-10">Buy, Sell, Trade</p>
-            <h1 class="text-[40px]/10 font-bold ">Buy and sell crypto easily and instantly</h1>
-            <p class="mt-4">Buy, sell, and exchange at the best price with just one click without complications</p>
-            <button class="bg-white rounded-lg p-3 text-blue-950 text-lg mt-10 hover:text-blue-500"><a href="">Start
-                    Trading <i class="fas fa-arrow-right"></i></a></button>
+    <div class="grid md:grid-cols-2 bg-gray-100 lg:rounded-[20px] lg:mx-20 mt-4">
+        <div class="lg:px-20 mt-10 px-8 md:px-10">
+            <h1 class="font-bold lg:text-4xl text-2xl">About <span class="text-teal-700"><i>Wave-Africa</i></span></h1>
+            <p class="text-normal text-gray-600 mt-4 text-justify hyphens-auto md:mb-10">Welcome to Wave-Africa, your
+                trusted
+                platform for seamless cryptocurrency trading, conversions, and
+                secure transactions. At Wave-Africa, we empower individuals and businesses across Africa and beyond to
+                buy, and exchange digital currencies with ease, speed, and top-tier security. Whether you're
+                looking to trade Bitcoin, Ethereum, USDT, or other leading cryptocurrencies, our user-friendly platform
+                offers competitive rates, low fees, and instant conversions. With a commitment to transparency and
+                cutting-edge blockchain technology, Wave-Africa ensures your transactions are fast, reliable, and
+                protected. Join the financial revolution today and ride the wave of the future with Wave-Africa.</p>
         </div>
-        <div>
-            <img src="https://bit2me.com/assets/img/main/home/banners/essentials/img-big_buy-sell-operate.png"
-                class="lg:rounded-tr-[20px] lg:rounded-bl-[20px]" alt="">
+        <div class="flex items-center">
+            <img src="https://bit2me.com/assets/img/main/home/banners/create/img-big_api.png" class="lg:rounded-r-lg"
+                alt="">
         </div>
 
     </div>
 
-    <div class="grid lg:grid-cols-2 md:px-20 mt-4 gap-4 ">
-        <div class="bg-green-100 md:rounded-[20px] ">
-            <i class="fa fa-wallet text-blue-950 mt-10 lg:px-10 px-8"></i>
-            <p class="text-sm lg:px-10 p-8">Wave Wallet</p>
-            <h1 class="text-[40px]/10 font-bold lg:px-10 px-8">Store, Send, and receive Crytocurrencies</h1>
-            <p class="text-lg mt-4 lg:px-10 px-8">Create your free wallet today!</p>
-            <button class="bg-white text-blue-950 hover:text-blue-500 p-3 mt-8 rounded-md lg:ml-10 ml-8"><a href="">Open
-                    your
-                    wallet <i class="fa fa-arrow-right"></i></a></button>
-            <img src="https://bit2me.com/assets/img/main/home/banners/essentials/img-lite_wallet.png"
-                class="float-right" alt="">
 
-        </div>
-        <div class="bg-white md:rounded-[20px] shadow-lg md:p-10 px-4">
-            <h1 class="text-[30px] font-bold text-teal-900 mt-5">Savings</h1>
-            <p>Earn daily rewards</p>
-            <div class="grid grid-flow-cols grid-cols-2 gap-4 mt-8">
-                <div class="bg-gray-100 rounded-lg p-4">
-                    <div class="flex gap-2 ">
-                        <img src="https://wallet.cex.io/files/web-resources/ic_usdt.svg" alt="">
-                        <div>
-                            <h1>Tether USDT</h1>
-                            <p class="text-sm">USDT</p>
-                        </div>
-                    </div>
-                    <P class="font-medium mt-3">Annual reward 4%</P>
-                </div>
-                <div class="bg-gray-100 rounded-lg p-4">
-                    <div class="flex gap-2 ">
-                        <img src="https://wallet.cex.io/files/web-resources/ic_usdc.svg" alt="">
-                        <div>
-                            <h1>USD Coin</h1>
-                            <p class="text-sm">USDC</p>
-                        </div>
-                    </div>
-                    <P class="font-medium mt-3">Annual reward 4%</P>
-                </div>
-                <div class="bg-gray-100 rounded-lg p-4">
-                    <div class="flex gap-2 ">
-                        <img src="https://wallet.cex.io/files/web-resources/ic_eth.svg" alt="">
-                        <div>
-                            <h1>Ethereum</h1>
-                            <p class="text-sm">ETH</p>
-                        </div>
-                    </div>
-                    <P class="font-medium mt-3">Annual reward 2%</P>
-                </div>
-                <div class="bg-gray-100 rounded-lg p-4">
-                    <div class="flex gap-2 ">
-                        <img src="https://wallet.cex.io/files/web-resources/ic_btc.svg" alt="">
-                        <div>
-                            <h1>BTC</h1>
-                            <p class="text-sm">USDT</p>
-                        </div>
-                    </div>
-                    <P class="font-medium mt-3">Annual reward 0.25%</P>
-                </div>
-            </div>
+    <!-- ready to ride -->
+    <div class="bg-teal-950 text-center mt-4 p-10">
+        <h1 class="md:text-4xl text-3xl font-bold text-white">Ready to ride the crypto <span
+                class="text-teal-300"><i>wave?</i></span></h1>
+        <p class="text-white mt-4">Join thousands of traders on Wave-Africa today!</p>
+        <div class="flex justify-center mt-8 gap-1 md:gap-4">
             <button
-                class="bg-green-100 text-[20px] px-10 py-2 rounded-lg mb-8 mt-10 hover:bg-teal-700 hover:text-white"><a
-                    href="">Start Saving</a></button>
+                class=" bg-white rounded-lg px-6 py-2 hover:shadow-md hover:shadow-teal-50 transition-shadow duration-300">
+                <a href="" class="flex gap-2">
+                    <img src="data:image/svg+xml,%3csvg%20width='19'%20height='20'%20viewBox='0%200%2019%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.96391%209.53467L0.589844%2018.3082C0.683884%2018.6414%200.852876%2018.9488%201.0839%2019.2067C1.31493%2019.4647%201.60188%2019.6664%201.9228%2019.7964C2.24373%2019.9265%202.59015%2019.9814%202.93557%2019.9571C3.28099%2019.9327%203.61627%2019.8297%203.91578%2019.6559L13.3382%2014.2896L8.96391%209.53467Z'%20fill='%23EA4335'/%3e%3cpath%20d='M17.4315%208.04332L13.3569%205.70947L8.77051%209.73421L13.3756%2014.277L17.4191%2011.9681C17.7773%2011.7806%2018.0774%2011.4985%2018.2867%2011.1526C18.4961%2010.8067%2018.6067%2010.41%2018.6067%2010.0057C18.6067%209.60135%2018.4961%209.20471%2018.2867%208.85878C18.0774%208.51285%2017.7773%208.23082%2017.4191%208.04325H17.4316L17.4315%208.04332Z'%20fill='%23FBBC04'/%3e%3cpath%20d='M0.589583%201.65967C0.538967%201.84679%200.51377%202.03988%200.514672%202.23373V17.7339C0.515197%2017.9277%200.540369%2018.1206%200.589583%2018.308L9.25071%209.75917L0.589583%201.65967Z'%20fill='%234285F4'/%3e%3cpath%20d='M9.02631%209.98403L13.3569%205.70962L3.94702%200.318238C3.59298%200.110893%203.19031%200.00108711%202.78002%204.3343e-06C1.76186%20-0.00197446%200.866734%200.673785%200.589844%201.65364L9.02631%209.98403Z'%20fill='%2334A853'/%3e%3c/svg%3e"
+                        alt="">
+                    <div class=" ">
+                        <p class="text-[12px]/1 text-start font-bold mt-2">Get it on</p>
+                        <h1 class="font-black ">GooglePlay</h1>
+                    </div>
+                </a>
+
+            </button>
+            <button
+                class=" bg-white rounded-lg px-6 py-2 hover:shadow-md hover:shadow-teal-50 transition-shadow duration-300">
+                <a href="" class="flex gap-2">
+                    <div>
+                        <i class="fab fa-apple text-[30px]"></i>
+                    </div>
+                    <div class=" ">
+                        <p class="text-[12px]/1 text-start font-bold mt-2">Get it on</p>
+                        <h1 class="font-black ">AppStore</h1>
+                    </div>
+                </a>
+
+            </button>
         </div>
     </div>
 
-    <!-- trusted -->
-    <div class="text-center mt-20">
-        <p class="md:text-[20px]">Trusted by millions of users</p>
-        <h1
-            class="mt-5 md:text-[70px] text-[40px] font-bold bg-gradient-to-r from-teal-900 to-teal-300 bg-clip-text text-transparent">
-            5,000,000+</h1>
-    </div>
-
-    <!-- wave in numbers -->
-    <div>
-        <h1 class="text-center mt-10 md:text-[50px] text-[30px] font-bold"><span
-                class="text-teal-700"><i>Wave</i></span> in numbers
-        </h1>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:p-20 p-8">
-            <div class="bg-gray-100 rounded-lg p-8">
-                <i class="fas fa-wallet text-3xl mt-4"></i>
-                <h1 class="text-5xl font-bold mt-8">100</h1>
-                <p>Crypto Assets</p>
+    <!-- signup -->
+    <div
+        class="grid md:grid-cols-2 bg-gradient-to-r from-teal-800 to-teal-500 md:m-10 m-5 p-2 rounded-[20px] md:p-10 overflow-hidden">
+        <div class="md:flex flex-col justify-center px-8">
+            <h1 class="md:text-4xl text-2xl mt-2 md:mt-0 font-medium text-white">Sign up for updates</h1>
+            <p class="mt-2 text-gray-300">Stay awake of timely Wave updates and market developments.</p>
+            <p class="mt-4 text-sm text-gray-300">Email Adress</p>
+            <div>
+                <input type="email" name="" id=""
+                    class="border border-gray-300 rounded-lg md:mt-8 focus:outline-none py-2 px-6 text-white focus:border-teal-500"
+                    placeholder="example@email.com">
+                <button
+                    class="bg-teal-500 rounded-lg px-5 py-2 text-teal-900 font-medium hover:shadow-md hover:shadow-teal-300 mt-2 lg:mt-0"><a
+                        href="">Subscribe</a></button>
             </div>
-            <div class="bg-gray-100 rounded-lg p-8">
-                <i class="fas fa-rocket text-3xl mt-4"></i>
-                <h1 class="text-5xl font-bold mt-8">$1M</h1>
-                <p>Crypto Delivered</p>
+            <div class="mt-4 flex gap-2 text-sm">
+                <input type="checkbox" name="" id="">
+                <p class="text-gray-300">I agree to receive emails from Wave-Africa</p>
             </div>
-            <div class="bg-gray-100 rounded-lg p-8">
-                <i class="fa fa-check-circle text-3xl mt-4"></i>
-                <h1 class="text-5xl font-bold mt-8">1000</h1>
-                <p>Account Created</p>
-            </div>
-            <div class="bg-gray-100 rounded-lg p-8">
-                <i class="fa fa-handshake text-3xl mt-4"></i>
-                <h1 class="text-5xl font-bold mt-8">90</h1>
-                <p>Countries supported</p>
-            </div>
-
+        </div>
+        <div class="md:flex items-center p-4 md:p-0">
+            <img src="https://cex.io/_next/image?url=https%3A%2F%2Fcex.io%2F_next%2Fstatic%2Fmedia%2Fsign-up-box.58efdda3.png&w=1400&q=75"
+                alt="">
         </div>
     </div>
 
 
-
-    <!-- wave discover -->
-    <div>
-        <h1 class="text-center md:text-5xl text-2xl"><span class="text-teal-700">Wave</span> Discover</h1>
-    </div>
-    <div class="grid md:grid-cols-2 gap-8 lg:p-20 p-8">
-        <!-- Left Card - Main Content -->
-        <div class="bg-slate-900 rounded-[20px] flex flex-col h-full">
-            <div class="p-10 flex-1">
-                <h1 class="text-white font-medium lg:text-3xl mb-4">Study Crypto</h1>
-                <p class="text-white text-lg mb-6">Learn more and understand how crypto works from fundamentals to
-                    advanced trading techniques, to on-chain analysis
-                </p>
-            </div>
+    <!-- contact -->
+    <div class="" id="contact">
+        <h1 class="text-center font-bold text-4xl text-teal-900">Get in touch</h1>
+        <p class="text-center text-gray-500">Have questions? We're here to help you 24/7</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 md:p-10 md:gap-8">
             <div class="">
-                <img src="https://bit2me.com/assets/img/main/home/banners/next-level/img-big_pro.png"
-                    class="w-full rounded-lg" alt="Crypto education">
+                <a href="" class="flex gap-2 bg-white shadow-lg rounded-lg p-3 hover:scale-110">
+                    <div class="">
+                        <i class="fas fa-envelope bg-gray-200 rounded-full p-3 text-teal-700 "></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Email</h1>
+                        <p>support@wave.com</p>
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <!-- Right Column - Articles -->
-        <div class="grid gap-6">
-            <!-- Article 1 -->
-            <div class="flex gap-6 p-6 bg-white rounded-[20px] hover:shadow-md transition-all">
-                <div class="flex-shrink-0 w-20 h-20 bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="https://bit2me.com/assets/img/main/home/banners/create/img-big_api.png"
-                        class="w-full h-full object-cover" alt="Bitcoin">
-                </div>
-                <div>
-                    <h1 class="text-2xl font-medium text-gray-800 hover:text-red-700 mb-2">
-                        <a href="#">What is bitcoin?</a>
-                    </h1>
-                    <p class="text-gray-500">Beginners Guide</p>
-                </div>
+            <div>
+                <a href="" class="flex gap-2 bg-white shadow-lg rounded-lg p-3 hover:scale-110">
+                    <div>
+                        <i class="fa fa-phone bg-gray-200 rounded-full p-3 text-teal-700"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Phone</h1>
+                        <p>+234806729043</p>
+                    </div>
+                </a>
             </div>
-
-            <!-- Article 2 -->
-            <div class="flex gap-6 p-6 bg-white rounded-[20px] hover:shadow-md transition-all">
-                <div class="flex-shrink-0 w-20 h-20 bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="https://bit2me.com/assets/img/main/home/banners/next-level/img-lite_loan.png"
-                        class="w-full h-full object-cover" alt="Wallet security">
-                </div>
-                <div>
-                    <h1 class="text-2xl font-medium text-gray-800 hover:text-red-700 mb-2">
-                        <a href="#">How to secure your wallet</a>
-                    </h1>
-                    <p class="text-gray-500">See how you can effectively secure your wallet</p>
-                </div>
+            <div>
+                <a href="" class="flex gap-2 bg-white shadow-lg rounded-lg p-3 hover:scale-110">
+                    <div>
+                        <i class="fa fa-map-marker-alt bg-gray-200 rounded-full p-3 text-teal-700"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Office</h1>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                </a>
             </div>
-
-            <!-- Article 3 -->
-            <div class="flex gap-6 p-6 bg-white rounded-[20px] hover:shadow-md transition-all">
-                <div class="flex-shrink-0 w-20 h-20 bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="https://bit2me.com/assets/img/main/home/banners/essentials/img-lite_bpay.png"
-                        class="w-full h-full object-cover" alt="Trading">
-                </div>
-                <div>
-                    <h1 class="text-2xl font-medium text-gray-800 hover:text-red-700 mb-2">
-                        <a href="#">Stop orders in spot trading?</a>
-                    </h1>
-                    <p class="text-gray-500">Learn more on trading strategies</p>
-                </div>
-            </div>
-
-            <!-- Article 4 -->
-            <div class="flex gap-6 p-6 bg-white rounded-[20px] hover:shadow-md transition-all">
-                <div class="flex-shrink-0 w-20 h-20 bg-gray-200 rounded-lg overflow-hidden">
-                    <img src="https://bit2me.com/assets/img/main/home/banners/b2m/img-lite_token.png"
-                        class="w-full h-full object-cover" alt="Tokenized assets">
-                </div>
-                <div>
-                    <h1 class="text-2xl font-medium text-gray-800 hover:text-red-700 mb-2">
-                        <a href="#">Tokenized real world assets</a>
-                    </h1>
-                    <p class="text-gray-500">How they work</p>
-                </div>
+            <div>
+                <a href="" class="flex gap-2 bg-white shadow-lg rounded-lg p-3 hover:scale-110">
+                    <div>
+                        <i class="fa fa-comment-dots bg-gray-200 rounded-full p-3 text-teal-700"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold">Live Chat</h1>
+                        <p>Available 24/7</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
 
     <!-- footer -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 p-4 md:p-20 bg-teal-50 gap-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 p-4 md:p-20 bg-teal-50 gap-4 mt-10">
         <div>
             <img src="assets/img/logo-light-rounded-full-teal.png" class="w-40" alt="">
-            <h1 class="font-bold text-[20px] mt-4">Stayed tuned</h1>
-            <input type="text" placeholder="Email Address" class="border-b mb-5 mt-4 p-2">
-            <br>
-            <input type="checkbox" name="" id=""> <p class="text-sm">I agree to receive emails from Wave-Africa</p>
-            <button class="bg-teal-500 rounded-lg px-20 py-2 text-lg text-white mt-8 hover:bg-teal-700"><a
-                    href="">Subscribe</a></button>
+            <p class="mt-4">The leading platform for cryptocurrency trading and exchange. <br><span class="text-gray-500">Wave Africa, where trading meets convinience</span>
+
+            </p>
         </div>
         <div>
             <h1 class="font-medium text-xl">Services</h1>
             <ul>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy & Sell Crpto </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Bitcoin </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Ethereum </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">BTC to USD</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Crypto with Paypal </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Cyrpto with Applepay</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Bitcoin with prepaid card </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Buy Bitcoin with bank account </a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default" >Crypto Trading </a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Bitcoin Exchange</a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Buy Ethereum </a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">BTC to USD</a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Buy Crypto with Paypal </a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Buy Cyrpto with Applepay</a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Buy Bitcoin with prepaid card </a></li>
+                <li><a href="" class="text-gray-900 hover:text-teal-700 pointer-events-none cursor-default">Buy Bitcoin with bank account </a></li>
             </ul>
         </div>
         <div>
-            <h1 class="font-medium text-xl">About</h1>
+            <h1 class="font-medium text-xl">Company</h1>
             <ul>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">ABout us </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Contact Us </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Team</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Legal and security</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Terms of use </a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Privacy Policy</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Cookie Policy</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Press</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Blog</a></li>
-                <li><a href="" class="text-gray-900 hover:text-teal-700">Help Center</a></li>
-                
+                <li><a href="#about" class="text-gray-900 hover:text-teal-700">About us </a></li>
+                <li><a href="#contact" class="text-gray-900 hover:text-teal-700">Contact Us </a></li>
+                <li><a href="terms.html" class="text-gray-900 hover:text-teal-700">Terms of use </a></li>
+                <li><a href="privacy.html" class="text-gray-900 hover:text-teal-700">Privacy Policy</a></li>
+                <li><a href="kyc.html" class="text-gray-900 hover:text-teal-700">AML & KYC Policy</a></li>
+
+
             </ul>
         </div>
         <div>
@@ -420,7 +375,33 @@
             </div>
         </div>
     </div>
+    <div class="bg-teal-50 border border-top border-gray-300 text-center p-4 text-gray-500">
+        <p>&copy; 2024 Shazzy. All Right Reserved.</p>
+    </div>
 
+
+
+
+
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            const icon = this.querySelector('i');
+
+            // Toggle menu visibility
+            menu.classList.toggle('hidden');
+
+            // Change icon between bars and times
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    </script>
 </body>
 
 </html>
